@@ -1,4 +1,4 @@
-# RakshaSootra  
+# RakshaSootra
 ### The Sootra of Peaceful Driving
 
 ![Image](https://github.com/user-attachments/assets/e15a9507-a036-43b0-b343-ddc3da888add)
@@ -17,8 +17,7 @@ Modern commutes are stressful, and emotional imbalance can easily affect driving
 
 - 🎙 **Emotion Detection** for stress, anger, anxiety, and fatigue  
 - 🤖 **GenAI Conversation Engine** that adapts to driver mood  
-- 🗣 **Multilingual Support** for Indian regional languages  
-- 👨‍👩‍👧 **Caregiver App** to monitor trip progress  
+- 🗣 **Multilingual Support** for Indian regional languages   
 - 🍔 **Voice-based eCommerce** (food ordering, rest stops, parking)  
 - 💬 Friendly suggestions like take a break or breathe  
 - 🚘 Smooth, human-like interaction that builds trust  
