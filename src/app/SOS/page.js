@@ -24,6 +24,7 @@ export default function SOSPage() {
 
   useEffect(() => {
     let watchId;
+    const audioPlayer = audioRef.current;
 
     if ('geolocation' in navigator) {
       watchId = navigator.geolocation.watchPosition(
@@ -63,9 +64,9 @@ export default function SOSPage() {
 
     return () => {
       if (watchId) navigator.geolocation.clearWatch(watchId);
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
+      if (audioPlayer) {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
       }
     };
   }, []);

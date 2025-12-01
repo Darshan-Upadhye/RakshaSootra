@@ -237,7 +237,7 @@ export default function VoiceAssistant() {
               <div className={`w-16 h-16 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mb-4 shadow-lg shadow-cyan-500/20`}>
                 <Volume2 size={28} className="text-white" />
               </div>
-              <p className={`text-lg font-medium ${themeColors.text} mb-2`}>"Hello, I am Raksha."</p>
+              <p className={`text-lg font-medium ${themeColors.text} mb-2`}>&quot;Hello, I am Raksha.&quot;</p>
               <p className={`text-sm ${themeColors.textSub}`}>Tap the microphone to start speaking.</p>
             </div>
           )}

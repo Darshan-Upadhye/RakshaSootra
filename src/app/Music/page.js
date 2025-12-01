@@ -89,13 +89,17 @@ export default function MusicPlayerPage() {
         audio.src = currentTrack.src;
         audio.load();
       }
-      audio.volume = volume;
+      
       if (isPlaying) {
-        try { await audio.play(); } catch (err) { setIsPlaying(false); }
+        try { 
+          await audio.play(); 
+        } catch (err) { 
+          setIsPlaying(false); 
+        }
       }
     };
     loadAndPlay();
-  }, [currentIndex, currentTrack]);
+  }, [currentIndex, currentTrack, isPlaying]);
 
   useEffect(() => { if (audioRef.current) audioRef.current.volume = volume; }, [volume]);
 
@@ -130,7 +134,7 @@ export default function MusicPlayerPage() {
     return (
       <img 
         src={src} 
-        alt={alt} 
+        alt={alt || "Album Cover"} 
         className={`${size} object-cover`}
         onError={() => setError(true)}
       />
@@ -182,7 +186,7 @@ export default function MusicPlayerPage() {
       >
         <div className="flex justify-between items-center mb-6 relative z-20">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center backdrop-blur-md">
+            <div className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center backdrop-blur-md overflow-hidden">
                <img src="/Music_Icon.svg" alt="Music" className="w-6 h-6 object-contain" />
             </div>
             <div>

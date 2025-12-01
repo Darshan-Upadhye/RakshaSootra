@@ -131,7 +131,7 @@ export default function InGeniGo() {
               rel="noopener noreferrer"
               className="px-8 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2"
             >
-              Let's GO <ArrowLeft size={16} className="rotate-180" />
+              Let&apos;s GO <ArrowLeft size={16} className="rotate-180" />
             </a>
           </motion.div>
 

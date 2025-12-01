@@ -60,13 +60,16 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
       >
-        <motion.img
-          src="/RakshaSootra_Icon.svg"
-          alt="RakshaSootra Logo"
-          className="w-16 h-16"
+        <motion.div
           animate={{ y: [0, -3, 0] }}
           transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-        />
+        >
+          <img
+            src="/RakshaSootra_Icon.svg"
+            alt="RakshaSootra Logo"
+            className="w-16 h-16"
+          />
+        </motion.div>
       </motion.div>
 
       <motion.div
@@ -277,7 +280,7 @@ export default function Home() {
                   </div>
                   <h2 className="text-xl font-bold text-white mb-2">Darshan Akshay Upadhye</h2>
                   <p className="text-sm text-blue-200/80 mb-4 leading-relaxed">
-                    Hi, I'm Darshan Akshay Upadhye, a B.Tech student in Electronics and Computer Engineering.
+                    Hi, I&apos;m Darshan Akshay Upadhye, a B.Tech student in Electronics and Computer Engineering.
                     I have a strong passion and experience in Full Stack Web Development, Generative AI and Graphic Design. 
                     I enjoy building innovative and intelligent web applications that solve real-world problems using cutting-edge technologies.
                   </p>
