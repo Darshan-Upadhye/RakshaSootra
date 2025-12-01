@@ -1,7 +1,7 @@
 # RakshaSootra  
 ### The Sootra of Peaceful Driving
 
-<img width="1484" height="1664" alt="Image" src="https://github.com/user-attachments/assets/f7549680-f99f-4bf6-b0be-62c32e460a7e" />
+![Image](https://github.com/user-attachments/assets/e15a9507-a036-43b0-b343-ddc3da888add)
 
 RakshaSootra is an emotion-aware GenAI driving assistant designed to make every drive calm, focused, and safer. It analyzes the driver’s emotional state using voice cues and responds with supportive, human-like conversations. The system also enables voice-based tasks like ordering food or booking parking, keeping the driver’s attention on the road.
 
