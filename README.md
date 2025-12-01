@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# RakshaSootra – The Sootra of Peaceful Driving
 
-## Getting Started
+RakshaSootra is an emotion-aware GenAI voice assistant designed to help drivers stay calm, focused, and emotionally supported on the road. It detects stress or frustration from voice, responds with supportive conversations, and offers hands-free services like food ordering and parking search. The project is built under the Tata Technologies InnoVent 2025-26 theme of Human-Centric and Immersive Driving Experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+RakshaSootra listens to the driver’s voice, analyzes emotional tone, and provides calming guidance. A companion app allows family members or caregivers to view trip progress and send supportive messages. The system also enables voice-based eCommerce actions, keeping the driver’s attention on the road.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Key Features
 
-## Learn More
+- Emotion detection for stress, anger, anxiety, and fatigue  
+- GenAI-powered calming conversations  
+- Multilingual support for Indian regional languages  
+- Companion mobile app for caregivers  
+- Voice-based food ordering and parking booking  
+- Context-aware suggestions like taking a break or relaxing  
+- Human-like interactions that reduce tension
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
+- Next.js (React)
+- Tailwind CSS  
+- Companion mobile UI (planned)
 
-## Deploy on Vercel
+### Backend
+- Node.js / Next.js API routes  
+- Firebase or Supabase for realtime data and logs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Voice Layer
+- Speech to Text: Web Speech API or Whisper  
+- Text to Speech: Speech Synthesis Utterance  
+- Emotion analysis: TensorFlow.js or pyAudioAnalysis  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### AI Model for Voice Assistance
+- Model: `deepseek/deepseek-r1`  
+- Provider: OpenRouter.ai  
+
+### 3rd Party Integrations
+- Google Maps API  
+- Food ordering partners
+- Parking and rest area APIs
+
+---
+
+## Why It Matters
+
+- Reduces emotionally driven driving risks  
+- Supports elderly or sensitive drivers  
+- Gives families peace of mind  
+- Enables hands-free access to essential services  
+- Creates a more human, compassionate in-car experience
+
+---
+
+## Target Users
+
+- Daily commuters dealing with stress  
+- Senior citizens driving alone  
+- Families and caregivers  
+- Automotive OEMs  
+- Fleet operators focusing on wellbeing  
+
+---
+
+## Originality
+
+This solution is fully conceptualized and developed by **Team RakshaTech**. It combines emotion detection, GenAI-driven de-escalation, caregiver connectivity, and in-vehicle voice commerce in a unique and integrated way.
+
+---
+
+## Team
+
+**Team RakshaTech**  
+- Darshan Akshay Upadhye  
+- Niranjan Umesh Mali  
+- Uttkarsh Shital Aitawade
+- Shubham Avinash Bansode
+- Om Mansing Patil  
+
+---
+
+## Screenshots
