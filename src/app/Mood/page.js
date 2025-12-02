@@ -17,12 +17,10 @@ import {
   VolumeX,
   X,
   Play,
-  Smile,   // Added
-  Frown,   // Added
-  Target   // Added
+  Smile,
+  Frown,
+  Target
 } from 'lucide-react';
-
-// --- Sub-components (Logic Preserved, UI Updated) ---
 
 function BreathingExercise() {
   const [phase, setPhase] = useState('Inhale');
@@ -144,16 +142,9 @@ function NapTimer() {
   );
 }
 
-/**
- * MOOD PAGE
- * * Design: Matches 'Inbox Page' UI (Wide, Responsive Container).
- * * Features: Mood selection, Stress Scan toggle, Dynamic suggestions, Modals.
- * * Layout: Updated container size to max-w-5xl for better view on desktop.
- */
 export default function MoodPage() {
   const [activeModal, setActiveModal] = useState(null); 
 
-  // Updated with Professional Icons (Lucide)
   const moods = useMemo(() => [
     { id: 'calm', label: 'Calm', icon: <Smile size={24} className="text-teal-400" /> },
     { id: 'focused', label: 'Focused', icon: <Target size={24} className="text-blue-400" /> },
@@ -266,29 +257,24 @@ export default function MoodPage() {
     window.location.href = '/Music';
   };
 
-  // --- Animation Variants ---
   const cardVariant = { hidden: { opacity: 0, scale: 0.98 }, show: { opacity: 1, scale: 1, transition: { duration: 0.4 } } };
   const fadeUp = { hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } };
   const listStagger = { show: { transition: { staggerChildren: 0.05 } } };
   const modalVariant = { hidden: { opacity: 0, scale: 0.95 }, show: { opacity: 1, scale: 1, transition: { duration: 0.2 } } };
 
   return (
-    // Outer Container: Fixed, Dark, Centered
+
     <div className="fixed inset-0 w-full h-full bg-[#0A192F] text-white flex items-center justify-center overflow-hidden font-sans">
       
-      {/* Background Ambience */}
       <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-cyan-900/20 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Main Card - Matched to Inbox Page Dimensions */}
       <motion.div 
         className="w-full h-full md:w-[90%] md:max-w-5xl md:h-[85vh] bg-[#112240] md:rounded-2xl flex flex-col shadow-2xl relative border-0 md:border border-white/10 overflow-hidden shrink-0 z-10"
         variants={cardVariant}
         initial="hidden"
         animate="show"
       >
-        
-        {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-700 bg-white/5 relative z-10 shrink-0">
           <div className="flex items-center gap-3">
             <button 
@@ -319,11 +305,9 @@ export default function MoodPage() {
           </div>
         </div>
 
-        {/* Scrollable Content - Center Aligned Wrapper */}
         <div className="flex-1 overflow-y-auto p-4 md:p-8 space-y-8 scrollbar-thin scrollbar-thumb-white/10">
           <div className="max-w-4xl mx-auto w-full">
             
-            {/* Mood Selector */}
             <motion.div variants={listStagger} initial="hidden" animate="show" className="space-y-3 mb-8">
               <div className="text-xs font-bold text-slate-500 uppercase tracking-widest pl-1">How are you feeling?</div>
               <div className="grid grid-cols-5 gap-2 md:gap-4">
@@ -350,7 +334,6 @@ export default function MoodPage() {
               </div>
             </motion.div>
 
-            {/* Current Suggestion Card */}
             <motion.div 
               key={selected}
               initial={{ opacity: 0, y: 10 }}
@@ -358,8 +341,6 @@ export default function MoodPage() {
               transition={{ duration: 0.3 }}
               className="bg-black/20 rounded-2xl p-6 md:p-8 border border-white/5 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10"
             >
-              
-              {/* Left Column: Radio Suggestions */}
               <div>
                 <div className="text-blue-200 font-medium mb-6 flex items-center gap-2 text-lg">
                   <span className="w-1.5 h-6 bg-blue-400 rounded-full"></span>
@@ -394,7 +375,6 @@ export default function MoodPage() {
                 </div>
               </div>
 
-              {/* Right Column: Quick Actions */}
               <div className="space-y-4">
                 <div className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1 md:mt-12">Quick Actions</div>
                 <div className="grid gap-3">
@@ -420,7 +400,6 @@ export default function MoodPage() {
         </div>
       </motion.div>
 
-      {/* --- MODALS --- */}
       <AnimatePresence>
         {activeModal && (
           <motion.div 
@@ -438,7 +417,6 @@ export default function MoodPage() {
               exit="hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Modal Background Glows */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -476,7 +454,7 @@ export default function MoodPage() {
                     <div className="text-center py-4">
                       <div className="text-6xl mb-6">💡</div>
                       <p className="text-white/90 text-sm font-medium leading-relaxed bg-white/5 p-4 rounded-xl border border-white/10">
-                        "Keep distance, maintain steady speed, and take short breaks if you feel tired."
+                        &quot;Keep distance, maintain steady speed, and take short breaks if you feel tired.&quot;
                       </p>
                     </div>
                   )}
