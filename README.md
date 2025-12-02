@@ -1,4 +1,5 @@
-# RakshaSootra ### The Sootra of Peaceful Driving
+# RakshaSootra 
+The Sootra of Peaceful Driving
 
 ![Image](https://github.com/user-attachments/assets/e15a9507-a036-43b0-b343-ddc3da888add)
 
@@ -125,17 +126,17 @@ It combines emotion detection, GenAI-driven calming conversations, caregiver com
 
 <img width="1364" height="639" alt="Image" src="https://github.com/user-attachments/assets/f9bb3d16-56ec-443c-903b-c03a27d4648b" />
 
-<img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/0b1b8044-4a33-4d04-868a-75fa3885b20b" />
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/bf0725b3-a8cc-4371-8d4b-5c5bca9a07d7" />
 
-<img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/1f0ec6b8-4587-4920-8f5b-a582272a3905" />
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/97a8f3bc-dd32-4656-b87e-a70a09842e4a" />
 
-<img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/b89edbc7-2741-42c3-a8d2-51bab941dc58" />
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/301761b4-3684-4c2d-93bc-cf86ea352396" />
 
-<img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/8862e162-010b-45f9-83af-ae39f1f67b53" />
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/83ff5028-dcc3-494b-b05f-a5f77be83e3b" />
 
-<img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/d4efb293-e61c-4116-9902-1876c8ab5f1d" />
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/86354ead-8c48-402e-9b89-5c01f152e7d1" />
 
-<img width="447" height="619" alt="Image" src="https://github.com/user-attachments/assets/78c0b18b-01c4-4a6a-96c1-3961188e6952" /> <img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/0b1b8044-4a33-4d04-868a-75fa3885b20b" />
+<img width="447" height="619" alt="Image" src="https://github.com/user-attachments/assets/78c0b18b-01c4-4a6a-96c1-3961188e6952" /> 
 
 <img width="447" height="619" alt="Image" src="https://github.com/user-attachments/assets/ccd45f75-497f-46a7-826c-f8025bf33f45" />
 
