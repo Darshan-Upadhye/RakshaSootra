@@ -1,89 +1,102 @@
-# RakshaSootra – The Sootra of Peaceful Driving
+# RakshaSootra
+### The Sootra of Peaceful Driving
 
-RakshaSootra is an emotion-aware GenAI voice assistant designed to help drivers stay calm, focused, and emotionally supported on the road. It detects stress or frustration from voice, responds with supportive conversations, and offers hands-free services like food ordering and parking search. The project is built under the Tata Technologies InnoVent 2025-26 theme of Human-Centric and Immersive Driving Experience.
+![Image](https://github.com/user-attachments/assets/e15a9507-a036-43b0-b343-ddc3da888add)
 
----
-
-## Overview
-
-RakshaSootra listens to the driver’s voice, analyzes emotional tone, and provides calming guidance. A companion app allows family members or caregivers to view trip progress and send supportive messages. The system also enables voice-based eCommerce actions, keeping the driver’s attention on the road.
+RakshaSootra is an emotion-aware GenAI driving assistant designed to make every drive calm, focused, and safer. It analyzes the driver’s emotional state using voice cues and responds with supportive, human-like conversations. The system also enables voice-based tasks like ordering food or booking parking, keeping the driver’s attention on the road.
 
 ---
 
-## Key Features
+## 🚗 Overview
 
-- Emotion detection for stress, anger, anxiety, and fatigue  
-- GenAI-powered calming conversations  
-- Multilingual support for Indian regional languages  
-- Companion mobile app for caregivers  
-- Voice-based food ordering and parking booking  
-- Context-aware suggestions like taking a break or relaxing  
-- Human-like interactions that reduce tension
+Modern commutes are stressful, and emotional imbalance can easily affect driving decisions. RakshaSootra bridges this gap by acting as a gentle, intelligent companion. It listens, understands, and responds in real-time, helping drivers stay relaxed and aware. A companion mobile interface also allows family members or caregivers to follow the trip and send helpful messages.
 
 ---
 
-## Tech Stack
+## ✨ Key Features
 
-### Frontend
-- Next.js (React)
+- 🎙 **Emotion Detection** for stress, anger, anxiety, and fatigue  
+- 🤖 **GenAI Conversation Engine** that adapts to driver mood  
+- 🗣 **Multilingual Support** for Indian regional languages   
+- 🍔 **Voice-based eCommerce** (food ordering, rest stops, parking)  
+- 💬 Friendly suggestions like take a break or breathe  
+- 🚘 Smooth, human-like interaction that builds trust  
+
+---
+
+## 🧠 GenAI Layer
+
+RakshaSootra uses a real-time AI model to generate empathetic conversations, convert speech to commands, and provide emotional relief.  
+
+**Model Used:** `deepseek/deepseek-r1`  
+**Provider:** OpenRouter.ai  
+
+This forms the core experience of calm, supportive communication while driving.
+
+---
+
+## 🛠 Tech Stack
+
+### **Frontend**
+- Next.js  
+- React  
 - Tailwind CSS  
-- Companion mobile UI (planned)
 
-### Backend
-- Node.js / Next.js API routes  
-- Firebase or Supabase for realtime data and logs
+### **Backend**
+- Node.js  
+- Next.js API Routes  
 
-### Voice Layer
-- Speech to Text: Web Speech API or Whisper  
-- Text to Speech: Speech Synthesis Utterance  
-- Emotion analysis: TensorFlow.js or pyAudioAnalysis  
+### **Voice Processing**
+- Web Speech API / Whisper (STT)  
+- Speech Synthesis Utterance (TTS)  
+- TensorFlow.js / pyAudioAnalysis for emotion analysis  
 
-### AI Model for Voice Assistance
-- Model: `deepseek/deepseek-r1`  
-- Provider: OpenRouter.ai  
-
-### 3rd Party Integrations
+### **Database & APIs**
+- Firebase or Supabase  
 - Google Maps API  
-- Food ordering partners
-- Parking and rest area APIs
+- Food ordering APIs
+- Live Radio API  
+- Parking and service partner APIs  
 
 ---
 
-## Why It Matters
+## 🎯 Why RakshaSootra Matters
 
-- Reduces emotionally driven driving risks  
-- Supports elderly or sensitive drivers  
+- Reduces emotional risks while driving  
+- Supports elderly or vulnerable drivers  
 - Gives families peace of mind  
-- Enables hands-free access to essential services  
-- Creates a more human, compassionate in-car experience
+- Enables essential tasks without distraction  
+- Makes driving more human, inclusive, and emotionally aware  
 
 ---
 
-## Target Users
+## 👥 Target Users
 
-- Daily commuters dealing with stress  
+- Daily commuters under stress  
 - Senior citizens driving alone  
 - Families and caregivers  
 - Automotive OEMs  
-- Fleet operators focusing on wellbeing  
+- Fleet operators  
 
 ---
 
-## Originality
+## 🧩 Originality
 
-This solution is fully conceptualized and developed by **Team RakshaTech**. It combines emotion detection, GenAI-driven de-escalation, caregiver connectivity, and in-vehicle voice commerce in a unique and integrated way.
+RakshaSootra is a fully original concept created by **Team RakshaTech**.  
+It combines emotion detection, GenAI-driven calming conversations, caregiver communication, and in-car voice commerce in a unique and integrated way.
 
 ---
 
-## Team
+## 🛡 Team RakshaTech
 
-**Team RakshaTech**  
-- Darshan Akshay Upadhye  
-- Niranjan Umesh Mali  
-- Uttkarsh Shital Aitawade
-- Shubham Avinash Bansode
-- Om Mansing Patil  
+- **Darshan Akshay Upadhye**  
+- **Niranjan Umesh Mali**  
+- **Uttkarsh Shital Aitawade**
+- **Shubham Avinash Bansode**
+- **Om Mansing Patil**
 
 ---
 
 ## Screenshots
+
+
