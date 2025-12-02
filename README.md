@@ -1,5 +1,5 @@
 # RakshaSootra 
-The Sootra of Peaceful Driving
+### The Sootra of Peaceful Driving
 
 ![Image](https://github.com/user-attachments/assets/e15a9507-a036-43b0-b343-ddc3da888add)
 
@@ -136,15 +136,17 @@ It combines emotion detection, GenAI-driven calming conversations, caregiver com
 
 <img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/86354ead-8c48-402e-9b89-5c01f152e7d1" />
 
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/56c41c6c-98d0-4b10-a46d-f6f95c44c382" />
+
 <img width="447" height="619" alt="Image" src="https://github.com/user-attachments/assets/78c0b18b-01c4-4a6a-96c1-3961188e6952" /> 
 
 <img width="447" height="619" alt="Image" src="https://github.com/user-attachments/assets/ccd45f75-497f-46a7-826c-f8025bf33f45" />
 
-<img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/4b79f02e-acc0-41b9-8a5e-d3bf57987ce5" />
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/a104b19c-1e70-4778-96c7-47f23a314604" />
 
-<img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/db3cd81d-0693-436f-98cc-d65eeb6afbfa" />
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/d4515bef-751d-428d-b722-a3b2cb2e73ef" />
 
-<img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/c788791a-70fd-4f25-a023-06dc26589b91" />
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/7b02ae25-9a37-4701-82a3-b8b04f7abe9e" />
 
 <img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/53c64ef0-567d-4efc-a9ba-985727f97267" />
 
