@@ -99,4 +99,10 @@ It combines emotion detection, GenAI-driven calming conversations, caregiver com
 
 ## Screenshots
 
+<img width="1364" height="639" alt="Image" src="https://github.com/user-attachments/assets/f9bb3d16-56ec-443c-903b-c03a27d4648b" />
 
+<img width="447" height="619" alt="Image" src="https://github.com/user-attachments/assets/78c0b18b-01c4-4a6a-96c1-3961188e6952" /> <img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/0b1b8044-4a33-4d04-868a-75fa3885b20b" />
+
+<img width="447" height="619" alt="Image" src="https://github.com/user-attachments/assets/ccd45f75-497f-46a7-826c-f8025bf33f45" />
+
+<img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/4b79f02e-acc0-41b9-8a5e-d3bf57987ce5" />
