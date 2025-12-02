@@ -7,20 +7,43 @@ RakshaSootra is an emotion-aware GenAI driving assistant designed to make every 
 
 ---
 
+[cite_start]Developed for the **Tata Technologies InnoVent 2025-26** (Theme: Human-Centric & Immersive Driving Experience)[cite: 1, 2], this system transforms the vehicle into an empathetic guardian.
+
+---
+
 ## 🚗 Overview
 
 Modern commutes are stressful, and emotional imbalance can easily affect driving decisions. RakshaSootra bridges this gap by acting as a gentle, intelligent companion. It listens, understands, and responds in real-time, helping drivers stay relaxed and aware. A companion mobile interface also allows family members or caregivers to follow the trip and send helpful messages.
 
 ---
 
-## ✨ Key Features
+## 🎯 The Mission
+* [cite_start]**The Problem:** Many road accidents and risky driving behaviors stem from emotional stress, anger, or anxiety.
+* [cite_start]**The Solution:** A system that listens to the driver's voice to understand emotional tone [cite: 11] and provides a holistic suite of wellness, safety, and entertainment features.
 
-- 🎙 **Emotion Detection** for stress, anger, anxiety, and fatigue  
-- 🤖 **GenAI Conversation Engine** that adapts to driver mood  
-- 🗣 **Multilingual Support** for Indian regional languages   
-- 🍔 **Voice-based eCommerce** (food ordering, rest stops, parking)  
-- 💬 Friendly suggestions like take a break or breathe  
-- 🚘 Smooth, human-like interaction that builds trust  
+---
+
+## 🌟 Key Features
+
+### 🧠 Core Emotional Intelligence
+* [cite_start]**Voice-Based Emotion Detection:** Detects stress, anger, anxiety, and fatigue in real-time.
+* [cite_start]**GenAI Empathetic Assistant:** Initiates calm conversations to de-escalate road rage or anxiety[cite: 12].
+* [cite_start]**Caregiver Companion App:** Allows family members to monitor trip progress and send voice messages to the driver[cite: 13].
+
+### 🧘 Wellness & Mood Management
+* **Mood-Based Song Suggestions:** Automatically curates music based on the driver's current emotional state to uplift or calm them.
+* **Guided Breathing (1 min):** A quick voice-guided session to lower immediate stress levels.
+* **Breathing Box (2 min):** A structured breathing exercise for deep relaxation during high-anxiety moments.
+* **Power Nap Timer:** A safety feature that helps tired drivers take a managed rest stop to prevent fatigue.
+
+### 🚦 Safety & Utility
+* **Speed Limit Check:** Monitors driving speed and warns the driver if they exceed safe limits.
+* **Emergency SOS:** Instantly alerts emergency contacts and services in critical situations.
+* [cite_start]**Voice-Based eCommerce:** Hands-free food ordering and parking booking to reduce distraction[cite: 14].
+
+### 📻 Infotainment & Connectivity
+* **Live Radio:** Integrated access to live radio stations.
+* **Bluetooth Connectivity:** Seamless pairing for media and calls. 
 
 ---
 
@@ -120,3 +143,15 @@ It combines emotion detection, GenAI-driven calming conversations, caregiver com
 <img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/db3cd81d-0693-436f-98cc-d65eeb6afbfa" />
 
 <img width="282" height="572" alt="Image" src="https://github.com/user-attachments/assets/c788791a-70fd-4f25-a023-06dc26589b91" />
+
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/53c64ef0-567d-4efc-a9ba-985727f97267" />
+
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/b1355477-12fa-4c3b-a0a3-2dd5392c966c" />
+
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/dfe0d935-4ce1-407e-9158-f82bc6f62a5e" />
+
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/dc940bb5-af68-4f4c-b596-09c18bde6716" />
+
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/45826782-e91c-4e88-a755-8f04ab9b24d3" />
+
+<img width="309" height="623" alt="Image" src="https://github.com/user-attachments/assets/98cc5709-d6e3-4454-8613-380bb4afbbea" />
