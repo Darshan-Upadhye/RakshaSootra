@@ -1,7 +1,28 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowLeft, 
+  Wind, 
+  Coffee, 
+  MapPin, 
+  Music, 
+  Phone, 
+  Zap, 
+  Moon, 
+  Activity, 
+  Timer,
+  Navigation,
+  VolumeX,
+  X,
+  Play,
+  Smile,   // Added
+  Frown,   // Added
+  Target   // Added
+} from 'lucide-react';
+
+// --- Sub-components (Logic Preserved, UI Updated) ---
 
 function BreathingExercise() {
   const [phase, setPhase] = useState('Inhale');
@@ -49,46 +70,25 @@ function BreathingExercise() {
   }, []);
 
   const variants = {
-    Inhale: { 
-      scale: 1.5, 
-      borderColor: "rgba(147, 197, 253, 1)",
-      backgroundColor: "rgba(59, 130, 246, 0.4)",
-      transition: { duration: 4, ease: "easeInOut" } 
-    },
-    HoldTop: { 
-      scale: 1.5, 
-      borderColor: "rgba(255, 255, 255, 1)", 
-      backgroundColor: "rgba(59, 130, 246, 0.6)", 
-      transition: { duration: 0 } 
-    },
-    Exhale: { 
-      scale: 1.0, 
-      borderColor: "rgba(147, 197, 253, 0.5)",
-      backgroundColor: "rgba(59, 130, 246, 0.1)",
-      transition: { duration: 4, ease: "easeInOut" } 
-    },
-    HoldBottom: { 
-      scale: 1.0, 
-      borderColor: "rgba(255, 255, 255, 0.5)",
-      backgroundColor: "rgba(59, 130, 246, 0.1)",
-      transition: { duration: 0 } 
-    },
+    Inhale: { scale: 1.3, borderColor: "rgba(59, 130, 246, 1)", backgroundColor: "rgba(59, 130, 246, 0.3)", transition: { duration: 4, ease: "easeInOut" } },
+    HoldTop: { scale: 1.3, borderColor: "rgba(255, 255, 255, 1)", backgroundColor: "rgba(59, 130, 246, 0.5)", transition: { duration: 0 } },
+    Exhale: { scale: 1.0, borderColor: "rgba(59, 130, 246, 0.5)", backgroundColor: "rgba(59, 130, 246, 0.1)", transition: { duration: 4, ease: "easeInOut" } },
+    HoldBottom: { scale: 1.0, borderColor: "rgba(255, 255, 255, 0.5)", backgroundColor: "rgba(59, 130, 246, 0.1)", transition: { duration: 0 } },
   };
 
   return (
-    <div className="flex flex-col items-center justify-center py-8">
-      <div className="relative flex items-center justify-center w-64 h-64">
+    <div className="flex flex-col items-center justify-center py-6">
+      <div className="relative flex items-center justify-center w-56 h-56">
         <motion.div
           animate={phase}
           variants={variants}
-          className="w-32 h-32 rounded-full border-4 flex items-center justify-center shadow-[0_0_40px_rgba(59,130,246,0.3)]"
+          className="w-28 h-28 rounded-full border-4 flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.3)]"
         >
-          <span className="text-4xl font-bold text-white">{count}</span>
+          <span className="text-3xl font-bold text-white">{count}</span>
         </motion.div>
-        
-        <div className="absolute -bottom-4 text-center">
-          <div className="text-xl font-medium tracking-wide text-white mb-1">{displayLabel}</div>
-          <p className="text-white/50 text-sm">Follow the rhythm</p>
+        <div className="absolute -bottom-2 text-center">
+          <div className="text-lg font-semibold text-blue-200 mb-1">{displayLabel}</div>
+          <p className="text-slate-400 text-xs">Follow the rhythm</p>
         </div>
       </div>
     </div>
@@ -118,49 +118,53 @@ function NapTimer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center py-6">
-      <div className="text-6xl font-mono font-bold tracking-widest mb-6 text-blue-200">
+    <div className="flex flex-col items-center justify-center py-6 w-full">
+      <div className="text-5xl font-mono font-bold tracking-widest mb-8 text-blue-300">
         {formatTime(seconds)}
       </div>
-      <div className="flex gap-4 w-full justify-center">
+      <div className="flex gap-3 w-full px-4">
         <button
           onClick={() => setIsActive(!isActive)}
-          className="flex-1 px-4 py-3 bg-white/10 hover:bg-white/20 rounded-xl border border-white/20 text-sm font-medium transition"
+          className="flex-1 py-3 bg-white/10 hover:bg-white/20 rounded-xl border border-white/10 text-sm font-medium transition-colors"
         >
           {isActive ? 'Pause' : 'Resume'}
         </button>
         <button
           onClick={() => { setSeconds(900); setIsActive(false); }}
-          className="flex-1 px-4 py-3 bg-white/10 hover:bg-white/20 rounded-xl border border-white/20 text-sm font-medium transition"
+          className="flex-1 py-3 bg-white/10 hover:bg-white/20 rounded-xl border border-white/10 text-sm font-medium transition-colors"
         >
           Reset
         </button>
       </div>
-      <p className="text-white/50 text-xs mt-6 text-center bg-white/5 p-3 rounded-lg w-full">
-        ⚠️ Ensure you are parked in a safe location before resting.
-      </p>
+      <div className="mt-6 bg-red-500/10 border border-red-500/20 p-3 rounded-lg flex items-center gap-2 text-red-200 text-xs mx-4">
+        <VolumeX size={14} />
+        <span>Ensure you are parked safely before resting.</span>
+      </div>
     </div>
   );
 }
 
+/**
+ * MOOD PAGE
+ * * Design: Matches 'Inbox Page' UI (Wide, Responsive Container).
+ * * Features: Mood selection, Stress Scan toggle, Dynamic suggestions, Modals.
+ * * Layout: Updated container size to max-w-5xl for better view on desktop.
+ */
 export default function MoodPage() {
   const [activeModal, setActiveModal] = useState(null); 
 
-  const moods = useMemo(
-    () => [
-      { id: 'calm', label: 'Calm', emoji: '🧘' },
-      { id: 'focused', label: 'Focused', emoji: '🎯' },
-      { id: 'stressed', label: 'Stressed', emoji: '😣' },
-      { id: 'sleepy', label: 'Sleepy', emoji: '😪' },
-      { id: 'energetic', label: 'Energetic', emoji: '⚡️' },
-    ],
-    []
-  );
+  // Updated with Professional Icons (Lucide)
+  const moods = useMemo(() => [
+    { id: 'calm', label: 'Calm', icon: <Smile size={24} className="text-teal-400" /> },
+    { id: 'focused', label: 'Focused', icon: <Target size={24} className="text-blue-400" /> },
+    { id: 'stressed', label: 'Stressed', icon: <Frown size={24} className="text-orange-400" /> },
+    { id: 'sleepy', label: 'Sleepy', icon: <Moon size={24} className="text-indigo-400" /> },
+    { id: 'energetic', label: 'Energetic', icon: <Zap size={24} className="text-yellow-400" /> },
+  ], []);
 
   const [selected, setSelected] = useState('calm');
   const [coords, setCoords] = useState(null);
   const [detectOn, setDetectOn] = useState(false);
-  const videoRef = useRef(null);
 
   const suggestions = useMemo(() => {
     const baseMapsUrl = (q) => `https://www.google.com/maps/search/${encodeURIComponent(q)}`;
@@ -172,9 +176,9 @@ export default function MoodPage() {
           { title: 'Radio City Smaran', tag: 'Devotional' },
         ],
         actions: [
-          { label: 'Guided breathing (1 min)', type: 'breathing' },
-          { label: 'Find tea/coffee', href: baseMapsUrl('tea coffee near me') },
-          { label: 'Safety Tips', type: 'tips' },
+          { label: 'Guided breathing', type: 'breathing', icon: <Wind size={16} /> },
+          { label: 'Find tea/coffee', href: baseMapsUrl('tea coffee near me'), icon: <Coffee size={16} /> },
+          { label: 'Safety Tips', type: 'tips', icon: <Zap size={16} /> },
         ],
       },
       focused: {
@@ -184,9 +188,9 @@ export default function MoodPage() {
           { title: 'Ambient Nature', tag: 'Focus' },
         ],
         actions: [
-          { label: 'Mute notifications', type: 'mute' },
-          { label: 'Parking ahead', href: baseMapsUrl('parking near me') },
-          { label: 'Open navigation', type: 'nav' },
+          { label: 'Mute notifications', type: 'mute', icon: <VolumeX size={16} /> },
+          { label: 'Parking ahead', href: baseMapsUrl('parking near me'), icon: <MapPin size={16} /> },
+          { label: 'Open navigation', type: 'nav', icon: <Navigation size={16} /> },
         ],
       },
       stressed: {
@@ -196,9 +200,9 @@ export default function MoodPage() {
           { title: 'Meditation Radio', tag: 'Calm' },
         ],
         actions: [
-          { label: 'Nearest rest area', href: baseMapsUrl('rest area near me') },
-          { label: 'Breathing Box (2 min)', type: 'breathing' },
-          { label: 'Call a trusted contact', type: 'call' },
+          { label: 'Nearest rest area', href: baseMapsUrl('rest area near me'), icon: <MapPin size={16} /> },
+          { label: 'Breathing Box', type: 'breathing', icon: <Wind size={16} /> },
+          { label: 'Call contact', type: 'call', icon: <Phone size={16} /> },
         ],
       },
       sleepy: {
@@ -208,9 +212,9 @@ export default function MoodPage() {
           { title: 'Desi Bollywood', tag: 'High Energy' },
         ],
         actions: [
-          { label: 'Find coffee', href: baseMapsUrl('coffee near me') },
-          { label: 'Nearest rest area', href: baseMapsUrl('rest area near me') },
-          { label: 'Power Nap Timer', type: 'nap' },
+          { label: 'Find coffee', href: baseMapsUrl('coffee near me'), icon: <Coffee size={16} /> },
+          { label: 'Nearest rest area', href: baseMapsUrl('rest area near me'), icon: <MapPin size={16} /> },
+          { label: 'Power Nap Timer', type: 'nap', icon: <Timer size={16} /> },
         ],
       },
       energetic: {
@@ -220,9 +224,9 @@ export default function MoodPage() {
           { title: 'Bollywood Dance', tag: 'Party' },
         ],
         actions: [
-          { label: 'Full Radio Player', type: 'open-music' },
-          { label: 'Scenic route spots', href: baseMapsUrl('scenic view point near me') },
-          { label: 'Speed Limit Check', type: 'speed' },
+          { label: 'Full Radio Player', type: 'open-music', icon: <Music size={16} /> },
+          { label: 'Scenic spots', href: baseMapsUrl('scenic view point near me'), icon: <MapPin size={16} /> },
+          { label: 'Speed Limit', type: 'speed', icon: <Activity size={16} /> },
         ],
       },
     };
@@ -262,166 +266,195 @@ export default function MoodPage() {
     window.location.href = '/Music';
   };
 
-  const page = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0.35 } } };
-  const card = { hidden: { opacity: 0, y: 16, scale: 0.98 }, show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.4, ease: 'easeOut' } } };
-  const fadeUp = { hidden: { opacity: 0, y: 8 }, show: { opacity: 1, y: 0, transition: { duration: 0.3, ease: 'easeOut' } } };
+  // --- Animation Variants ---
+  const cardVariant = { hidden: { opacity: 0, scale: 0.98 }, show: { opacity: 1, scale: 1, transition: { duration: 0.4 } } };
+  const fadeUp = { hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } };
+  const listStagger = { show: { transition: { staggerChildren: 0.05 } } };
   const modalVariant = { hidden: { opacity: 0, scale: 0.95 }, show: { opacity: 1, scale: 1, transition: { duration: 0.2 } } };
 
   return (
-    <motion.div
-      className="min-h-screen bg-[#0A2740] flex flex-col items-center justify-center text-white px-4 relative"
-      initial="hidden"
-      animate="show"
-      variants={page}
-    >
-      <div className="absolute top-4 left-4">
-        <motion.button
-          whileTap={{ scale: 0.96 }}
-          whileHover={{ backgroundColor: 'rgba(255,255,255,0.18)' }}
-          onClick={() => window.location.href = '/'}
-          className="flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 border border-white/15 text-sm transition-colors"
-          aria-label="Back to Home"
-        >
-          <span className="inline-block rotate-180">➔</span>
-          <span>Back</span>
-        </motion.button>
-      </div>
+    // Outer Container: Fixed, Dark, Centered
+    <div className="fixed inset-0 w-full h-full bg-[#0A192F] text-white flex items-center justify-center overflow-hidden font-sans">
+      
+      {/* Background Ambience */}
+      <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-cyan-900/20 rounded-full blur-[120px] pointer-events-none" />
 
-      <motion.div
-        className="w-full max-w-2xl bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 shadow-xl"
-        variants={card}
+      {/* Main Card - Matched to Inbox Page Dimensions */}
+      <motion.div 
+        className="w-full h-full md:w-[90%] md:max-w-5xl md:h-[85vh] bg-[#112240] md:rounded-2xl flex flex-col shadow-2xl relative border-0 md:border border-white/10 overflow-hidden shrink-0 z-10"
+        variants={cardVariant}
+        initial="hidden"
+        animate="show"
       >
-        <motion.div variants={fadeUp} className="flex items-center justify-between mb-5">
+        
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b border-gray-700 bg-white/5 relative z-10 shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-lg">🧭</div>
-            <div>
-              <h1 className="text-2xl font-semibold tracking-wide">Mood & Suggestions</h1>
-              <p className="text-white/80 text-sm">Select current mood to get tailored help.</p>
+            <button 
+              onClick={() => window.location.href = '/'} 
+              className="p-2 hover:bg-white/10 rounded-full text-slate-400 hover:text-white transition-colors"
+              title="Go Back"
+            >
+              <ArrowLeft size={20} />
+            </button>
+            <div className="flex flex-col">
+              <h1 className="font-semibold text-lg tracking-wide text-white">Mood</h1>
+              <p className="text-xs text-slate-400">Adaptive Assistant</p>
             </div>
           </div>
-
-          <div className="flex items-center gap-2 text-xs">
-            <span className="text-white/70">Stress Scan</span>
+          
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] font-bold text-slate-400 uppercase">Stress Scan</span>
             <button
-              onClick={() => setDetectOn((v) => !v)}
-              className={`px-3 py-1 rounded-lg border ${detectOn ? 'bg-white/20 border-white/50' : 'bg-white/10 border-white/20'}`}
+              onClick={() => setDetectOn(!detectOn)}
+              className={`w-10 h-5 rounded-full flex items-center px-1 transition-colors ${detectOn ? 'bg-blue-500' : 'bg-slate-700'}`}
             >
-              {detectOn ? 'On' : 'Off'}
+              <motion.div 
+                className="w-3 h-3 bg-white rounded-full shadow-sm" 
+                animate={{ x: detectOn ? 20 : 0 }}
+                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+              />
             </button>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div variants={fadeUp} className="mb-6">
-          <div className="text-sm text-white/80 mb-2 font-medium">How are you feeling?</div>
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
-            {moods.map((m) => {
-              const active = selected === m.id;
-              return (
-                <motion.button
-                  key={m.id}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setSelected(m.id)}
-                  className={`flex flex-col sm:flex-row items-center justify-center gap-2 rounded-xl px-3 py-3 border transition-all ${
-                    active ? 'bg-blue-500/20 border-blue-400 shadow-[0_0_15px_rgba(59,130,246,0.3)]' : 'bg-white/5 border-white/10 hover:bg-white/10'
-                  }`}
-                >
-                  <span className="text-xl">{m.emoji}</span>
-                  <span className="text-sm font-medium">{m.label}</span>
-                </motion.button>
-              );
-            })}
-          </div>
-        </motion.div>
+        {/* Scrollable Content - Center Aligned Wrapper */}
+        <div className="flex-1 overflow-y-auto p-4 md:p-8 space-y-8 scrollbar-thin scrollbar-thumb-white/10">
+          <div className="max-w-4xl mx-auto w-full">
+            
+            {/* Mood Selector */}
+            <motion.div variants={listStagger} initial="hidden" animate="show" className="space-y-3 mb-8">
+              <div className="text-xs font-bold text-slate-500 uppercase tracking-widest pl-1">How are you feeling?</div>
+              <div className="grid grid-cols-5 gap-2 md:gap-4">
+                {moods.map((m) => {
+                  const active = selected === m.id;
+                  return (
+                    <motion.button
+                      key={m.id}
+                      variants={fadeUp}
+                      onClick={() => setSelected(m.id)}
+                      className={`flex flex-col items-center justify-center p-2 md:p-4 rounded-xl border transition-all ${
+                        active 
+                          ? 'bg-blue-600/20 border-blue-500 text-white shadow-[0_0_15px_rgba(37,99,235,0.2)]' 
+                          : 'bg-[#173C5C] border-transparent text-slate-400 hover:bg-white/5 hover:border-white/10'
+                      }`}
+                    >
+                      <div className="mb-2 transition-transform transform group-hover:scale-110">
+                        {m.icon}
+                      </div>
+                      <span className="text-[10px] md:text-xs font-medium">{m.label}</span>
+                    </motion.button>
+                  );
+                })}
+              </div>
+            </motion.div>
 
-        <motion.div variants={fadeUp} className="mt-2 bg-black/20 rounded-xl p-4 border border-white/5">
-          <div className="text-blue-200 font-medium mb-4 flex items-center gap-2">
-            <span className="w-1 h-4 bg-blue-400 rounded-full"></span>
-            {current.headline}
-          </div>
-
-          <div className="mb-6">
-            <div className="text-sm text-white/60 mb-3 flex justify-between items-center">
-               <span>Suggested Radio Channels</span>
-               <span className="text-[10px] uppercase tracking-wider bg-white/10 px-2 py-0.5 rounded">Live</span>
-            </div>
-            <div className="grid gap-2">
-              {current.radio.map((t, i) => (
-                <div
-                  key={`${selected}-track-${i}`}
-                  className="flex items-center justify-between rounded-xl bg-white/5 border border-white/10 px-4 py-3 hover:bg-white/10 transition group"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-300 group-hover:scale-110 transition">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /></svg>
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">{t.title}</div>
-                      <div className="text-xs text-white/50">{t.tag}</div>
-                    </div>
-                  </div>
-                  <button
-                    className="text-xs font-bold px-4 py-2 rounded-full bg-white text-[#0A2740] hover:bg-blue-50 transition shadow-lg active:scale-95"
-                    onClick={openMusicPlayer}
-                  >
-                    Play
-                  </button>
+            {/* Current Suggestion Card */}
+            <motion.div 
+              key={selected}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-black/20 rounded-2xl p-6 md:p-8 border border-white/5 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10"
+            >
+              
+              {/* Left Column: Radio Suggestions */}
+              <div>
+                <div className="text-blue-200 font-medium mb-6 flex items-center gap-2 text-lg">
+                  <span className="w-1.5 h-6 bg-blue-400 rounded-full"></span>
+                  {current.headline}
                 </div>
-              ))}
-            </div>
-          </div>
 
-          <div>
-            <div className="text-sm text-white/60 mb-3">Quick Actions</div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              {current.actions.map((a, idx) => (
-                <button
-                  key={`act-${idx}`}
-                  onClick={() => runAction(a)}
-                  className="rounded-lg bg-white/10 border border-white/10 px-3 py-3 hover:bg-white/20 text-sm font-medium transition text-center sm:text-left flex items-center justify-center sm:justify-start gap-2"
-                >
-                  {a.label}
-                </button>
-              ))}
-            </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">
+                    <span>Suggested Audio</span>
+                    <span className="bg-red-500/20 text-red-400 px-1.5 py-0.5 rounded">LIVE</span>
+                  </div>
+                  
+                  {current.radio.map((t, i) => (
+                    <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition group">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition">
+                          <Music size={18} />
+                        </div>
+                        <div>
+                          <div className="text-sm font-medium text-white">{t.title}</div>
+                          <div className="text-[10px] text-slate-400">{t.tag}</div>
+                        </div>
+                      </div>
+                      <button 
+                        onClick={openMusicPlayer}
+                        className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 transition shadow-lg"
+                      >
+                        <Play size={14} fill="currentColor" />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right Column: Quick Actions */}
+              <div className="space-y-4">
+                <div className="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1 md:mt-12">Quick Actions</div>
+                <div className="grid gap-3">
+                  {current.actions.map((a, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => runAction(a)}
+                      className="flex items-center gap-4 p-3 rounded-xl bg-[#173C5C] hover:bg-[#1f4b70] border border-white/5 transition-colors text-left group"
+                    >
+                      <div className="p-2 bg-white/5 rounded-lg text-blue-300 group-hover:text-white transition-colors">{a.icon}</div>
+                      <span className="text-sm text-slate-200 group-hover:text-white transition-colors">{a.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+            </motion.div>
+
+            <p className="text-center text-[10px] text-slate-500 mt-6">
+              Suggestions update instantly based on your selection.
+            </p>
           </div>
-        </motion.div>
+        </div>
       </motion.div>
 
-      <motion.div
-        className="mt-4 text-center text-xs text-white/50 max-w-2xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        Tip: Switch moods anytime; suggestions update instantly.
-      </motion.div>
-
+      {/* --- MODALS --- */}
       <AnimatePresence>
         {activeModal && (
-          <motion.div
+          <motion.div 
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
             onClick={() => setActiveModal(null)}
           >
-            <motion.div
+            <motion.div 
+              className="w-full max-w-sm bg-[#112E4A] border border-white/10 rounded-3xl shadow-2xl p-6 relative overflow-hidden"
               variants={modalVariant}
               initial="hidden"
               animate="show"
               exit="hidden"
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-sm bg-[#0E3255] border border-white/10 rounded-3xl shadow-2xl p-8 relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl -ml-10 -mb-10 pointer-events-none" />
+              {/* Modal Background Glows */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+
+              <button 
+                onClick={() => setActiveModal(null)}
+                className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
+              >
+                <X size={20} />
+              </button>
+
               <div className="relative z-10">
-                
-                <h3 className="text-xl font-bold text-white text-center mb-6">
-                  {activeModal === 'breathing' && 'Box Breathing'}
-                  {activeModal === 'nap' && 'Power Nap'}
-                  {activeModal === 'speed' && 'Speed Awareness'}
-                  {activeModal === 'tips' && 'Safety Tips'}
+                <h3 className="text-xl font-bold text-white text-center mb-6 flex items-center justify-center gap-2">
+                  {activeModal === 'breathing' && <><Wind size={20} className="text-blue-400"/> Box Breathing</>}
+                  {activeModal === 'nap' && <><Moon size={20} className="text-purple-400"/> Power Nap</>}
+                  {activeModal === 'speed' && <><Activity size={20} className="text-red-400"/> Speed Check</>}
+                  {activeModal === 'tips' && <><Zap size={20} className="text-yellow-400"/> Safety Tips</>}
                 </h3>
 
                 <div className="min-h-[200px] flex flex-col justify-center">
@@ -435,34 +468,32 @@ export default function MoodPage() {
                       <p className="text-white/90 text-lg font-medium leading-relaxed">
                         Stay within posted speed limits.
                       </p>
-                      <p className="text-white/60 text-sm mt-2">Adapt to current road conditions.</p>
+                      <p className="text-slate-400 text-sm mt-2">Adapt to current road conditions.</p>
                     </div>
                   )}
 
                   {activeModal === 'tips' && (
                     <div className="text-center py-4">
                       <div className="text-6xl mb-6">💡</div>
-                      <p className="text-white/90 text-lg font-medium leading-relaxed">
-                        Keep distance, maintain steady speed, and take short breaks if you feel tired.
+                      <p className="text-white/90 text-sm font-medium leading-relaxed bg-white/5 p-4 rounded-xl border border-white/10">
+                        "Keep distance, maintain steady speed, and take short breaks if you feel tired."
                       </p>
                     </div>
                   )}
                 </div>
 
-                <div className="mt-8">
-                  <button
-                    onClick={() => setActiveModal(null)}
-                    className="w-full py-3 bg-white text-[#0A2740] font-bold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
-                  >
-                    Dismiss
-                  </button>
-                </div>
-
+                <button
+                  onClick={() => setActiveModal(null)}
+                  className="w-full mt-6 py-3 bg-white text-[#0A2740] font-bold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
+                >
+                  Close
+                </button>
               </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+
+    </div>
   );
 }

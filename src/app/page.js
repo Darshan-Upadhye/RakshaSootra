@@ -55,7 +55,7 @@ export default function Home() {
       </div>
 
       <motion.div
-        className="absolute top-5 left-3.5"
+        className="absolute top-13 left-3.5"
         initial={{ opacity: 0, y: -6 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
@@ -73,7 +73,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div
-        className="absolute top-5 right-4 flex flex-col space-y-3 items-end"
+        className="absolute top-13 right-4 flex flex-col space-y-3 items-end"
         variants={fadeIn}
         initial="hidden"
         animate="show"
@@ -149,7 +149,7 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      <motion.div className="mb-1 text-center" variants={fadeIn} initial="hidden" animate="show">
+      <motion.div className="mt-8 mb-3 text-center" variants={fadeIn} initial="hidden" animate="show">
         <motion.h1 className="text-3xl font-bold" variants={fadeIn}>
           RakshaSootra
         </motion.h1>
