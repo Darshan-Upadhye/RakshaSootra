@@ -1,5 +1,4 @@
-# RakshaSootra
-### The Sootra of Peaceful Driving
+# RakshaSootra ### The Sootra of Peaceful Driving
 
 ![Image](https://github.com/user-attachments/assets/e15a9507-a036-43b0-b343-ddc3da888add)
 
@@ -7,7 +6,9 @@ RakshaSootra is an emotion-aware GenAI driving assistant designed to make every 
 
 ---
 
-[cite_start]Developed for the **Tata Technologies InnoVent 2025-26** (Theme: Human-Centric & Immersive Driving Experience)[cite: 1, 2], this system transforms the vehicle into an empathetic guardian.
+Developed for the **Tata Technologies InnoVent 2025-26** (Theme: Human-Centric & Immersive Driving Experience), this system transforms the vehicle into an empathetic guardian.
+
+<img width="1366" height="467" alt="Image" src="https://github.com/user-attachments/assets/e8f76fb4-8370-4756-8553-18df733e37a6" />
 
 ---
 
@@ -18,17 +19,17 @@ Modern commutes are stressful, and emotional imbalance can easily affect driving
 ---
 
 ## 🎯 The Mission
-* [cite_start]**The Problem:** Many road accidents and risky driving behaviors stem from emotional stress, anger, or anxiety.
-* [cite_start]**The Solution:** A system that listens to the driver's voice to understand emotional tone [cite: 11] and provides a holistic suite of wellness, safety, and entertainment features.
+* **The Problem:** Many road accidents and risky driving behaviors stem from emotional stress, anger, or anxiety.
+* **The Solution:** A system that listens to the driver's voice to understand emotional tone and provides a holistic suite of wellness, safety, and entertainment features.
 
 ---
 
 ## 🌟 Key Features
 
 ### 🧠 Core Emotional Intelligence
-* [cite_start]**Voice-Based Emotion Detection:** Detects stress, anger, anxiety, and fatigue in real-time.
-* [cite_start]**GenAI Empathetic Assistant:** Initiates calm conversations to de-escalate road rage or anxiety[cite: 12].
-* [cite_start]**Caregiver Companion App:** Allows family members to monitor trip progress and send voice messages to the driver[cite: 13].
+* **Voice-Based Emotion Detection:** Detects stress, anger, anxiety, and fatigue in real-time.
+* **GenAI Empathetic Assistant:** Initiates calm conversations to de-escalate road rage or anxiety
+* **Caregiver Companion App:** Allows family members to monitor trip progress and send voice messages to the driver.
 
 ### 🧘 Wellness & Mood Management
 * **Mood-Based Song Suggestions:** Automatically curates music based on the driver's current emotional state to uplift or calm them.
@@ -39,7 +40,7 @@ Modern commutes are stressful, and emotional imbalance can easily affect driving
 ### 🚦 Safety & Utility
 * **Speed Limit Check:** Monitors driving speed and warns the driver if they exceed safe limits.
 * **Emergency SOS:** Instantly alerts emergency contacts and services in critical situations.
-* [cite_start]**Voice-Based eCommerce:** Hands-free food ordering and parking booking to reduce distraction[cite: 14].
+* **Voice-Based eCommerce:** Hands-free food ordering and parking booking to reduce distraction.
 
 ### 📻 Infotainment & Connectivity
 * **Live Radio:** Integrated access to live radio stations.
